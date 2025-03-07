@@ -22,7 +22,9 @@ The relative velocity along the normal direction (line connecting the particles)
 $$
 \mathbf{v}_{\text{along normal}} = (\mathbf{v}_i - \mathbf{v}_j) \cdot \hat{n}
 $$
-
+Where:
+- \( \mathbf{v}_i \) and \( \mathbf{v}_j \) are the velocities of particles \(i\) and \(j\),
+- \( \hat{n} \) is the unit vector along the collision normal (the direction of the collision).
 
 After the collision, the velocities of the particles are updated as:
 $$
