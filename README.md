@@ -31,6 +31,10 @@ $$
 \mathbf{v}_i' = \mathbf{v}_i - \text{impulse} \times \hat{n}
 $$
 $$
+\delta_{\text{max}} = \frac{q L^3}{3 E I}
+$$
+
+$$
 \mathbf{v}_j' = \mathbf{v}_j + \text{impulse} \times \hat{n}
 $$
 Where the impulse is calculated by:
