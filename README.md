@@ -11,36 +11,48 @@ This project simulates the motion of particles under the influence of gravity, t
 ## Equations:
 1. **Distance Between Particles**:
    \[
-   \text{Distance} = ||r_i - r_j||
+   \text{Distance} = ||\mathbf{r}_i - \mathbf{r}_j||
    \]
-   Where \( r_i \) and \( r_j \) are the positions of particles \( i \) and \( j \).
+   Where \( \mathbf{r}_i \) and \( \mathbf{r}_j \) are the positions of particles \( i \) and \( j \), respectively.
 
 2. **Velocity Update After Collision**:
    \[
-   v_{\text{along normal}} = \text{dot}(v_i - v_j, \text{normal})
+   \mathbf{v}_{\text{along normal}} = \mathbf{v}_i - \mathbf{v}_j \cdot \hat{n}
    \]
-   After the collision:
+   Where:
+   - \( \mathbf{v}_i \) and \( \mathbf{v}_j \) are the velocities of particles \( i \) and \( j \),
+   - \( \hat{n} \) is the unit vector along the collision normal (the direction of the collision).
+   
+   After the collision, the velocity update equations are:
    \[
-   v_i' = v_i - \text{impulse} \times \text{normal}
+   \mathbf{v}_i' = \mathbf{v}_i - \text{impulse} \times \hat{n}
    \]
    \[
-   v_j' = v_j + \text{impulse} \times \text{normal}
+   \mathbf{v}_j' = \mathbf{v}_j + \text{impulse} \times \hat{n}
    \]
+   The impulse is calculated as:
+   \[
+   \text{impulse} = \frac{2 \cdot (\mathbf{v}_i - \mathbf{v}_j) \cdot \hat{n}}{m_i + m_j}
+   \]
+   where \( m_i \) and \( m_j \) are the masses of particles \( i \) and \( j \).
 
 3. **Gravity Effect**:
    \[
-   v_y = v_y - g \times dt
+   v_y = v_y - g \cdot dt
    \]
-   Where \( g \) is the acceleration due to gravity, and \( dt \) is the time step.
+   Where:
+   - \( g \) is the acceleration due to gravity (9.81 m/s\(^2\)),
+   - \( dt \) is the time step of the simulation.
 
 4. **Damping Effect**:
-   After a collision, velocities are reduced by a damping factor:
+   After a collision, the velocities are reduced by a damping factor:
    \[
-   v_i = v_i \times \text{damping\_factor}
+   \mathbf{v}_i = \mathbf{v}_i \cdot \text{damping\_factor}
    \]
    \[
-   v_j = v_j \times \text{damping\_factor}
+   \mathbf{v}_j = \mathbf{v}_j \cdot \text{damping\_factor}
    \]
+   Where the damping factor is typically a value less than 1 to simulate energy loss.
 
 ## Requirements:
 - Python 3.x
