@@ -38,7 +38,7 @@ Where the impulse is calculated by:
 ```math
 \text{impulse} = \frac{2 \cdot (\mathbf{v}_i - \mathbf{v}_j) \cdot \hat{n}}{m_i + m_j}
 ```
-Where \ m_i \) and \ m_j \) are the masses of particles \(i\) and \(j\).
+Where $\(m_i \)$ and $\(m_j \)$ are the masses of particles \(i\) and \(j\).
 
 ### 3. Gravity Effect:
 The effect of gravity on the particles' velocities in the y-direction is modeled by:
