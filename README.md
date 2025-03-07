@@ -13,7 +13,7 @@ This project simulates the motion of particles under the influence of gravity, t
 ### 1. Distance Between Particles:
 The distance between two particles \(i\) and \(j\) is calculated as the Euclidean distance:
 $$
-\text{Distance} = \|\mathbf{r}_i - \mathbf{r}_j\|
+\text{Distance} = ||\mathbf{r}_i - \mathbf{r}_j||
 $$
 Where \( \mathbf{r}_i \) and \( \mathbf{r}_j \) are the positions of particles \(i\) and \(j\), respectively.
 
