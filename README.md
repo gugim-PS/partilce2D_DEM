@@ -18,8 +18,9 @@ The distance between two particles \(i\) and \(j\) is calculated as the Euclidea
 
 Where
 ```math
-\( \mathbf{r}_i \) and \( \mathbf{r}_j \) are the positions of particles \(i\) and \(j\), respectively.
+\( \mathbf{r}_i \) and \( \mathbf{r}_j \) 
 ```
+are the positions of particles $\(i\)$ and $\(j\)$, respectively.
 
 ### 2. Velocity Update After Collision:
 The relative velocity along the normal direction (line connecting the particles) is calculated as:
