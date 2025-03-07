@@ -16,10 +16,8 @@ The distance between two particles \(i\) and \(j\) is calculated as the Euclidea
 \text{Distance} = ||\mathbf{r}_i - \mathbf{r}_j||
 ```
 
-Where
-```math
-\( \mathbf{r}_i \) and \( \mathbf{r}_j \) 
-```
+Where $\( \mathbf{r}_i \)$ and $\( \mathbf{r}_j \) $
+
 are the positions of particles $\(i\)$ and $\(j\)$, respectively.
 
 ### 2. Velocity Update After Collision:
