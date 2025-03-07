@@ -12,9 +12,9 @@ This project simulates the motion of particles under the influence of gravity, t
 
 ### 1. Distance Between Particles:
 The distance between two particles \(i\) and \(j\) is calculated as the Euclidean distance:
-$$
+```math
 \text{Distance} = ||\mathbf{r}_i - \mathbf{r}_j||
-$$
+```
 Where \( \mathbf{r}_i \) and \( \mathbf{r}_j \) are the positions of particles \(i\) and \(j\), respectively.
 
 ### 2. Velocity Update After Collision:
@@ -30,10 +30,6 @@ After the collision, the velocities of the particles are updated as:
 $$
 \mathbf{v}_i' = \mathbf{v}_i - \text{impulse} \times \hat{n}
 $$
-$$
-\delta_{\text{max}} = \frac{q L^3}{3 E I}
-$$
-
 $$
 \mathbf{v}_j' = \mathbf{v}_j + \text{impulse} \times \hat{n}
 $$
